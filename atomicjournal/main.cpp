@@ -12,8 +12,6 @@ int main(int argc, char *argv[])
 {
     QCoreApplication a(argc, argv);
 
-    for (int i=0; i<10; i++)
-    {
     AtomicJournal journal;
 
     QList<QSharedPointer<ThreadedPrime>> primes;
@@ -31,7 +29,7 @@ int main(int argc, char *argv[])
 
     a.exec();
     qDebug() << "Got" << journal.count() / primes.count() << "entries per calculator.";
-}
+
     return 0;
 }
 
